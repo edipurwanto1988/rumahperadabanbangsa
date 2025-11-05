@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Peradaban Bangsa Foundation - Membangun Manusia, Menegakkan Peradaban</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #091C53 0%, #1E3063 50%, #0540AD 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #84C1FA 0%, #CEE6FD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pillar-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .program-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .program-card:hover {
+            border-color: #84C1FA;
+            transform: scale(1.02);
+        }
+        
+        .partner-logo {
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .slide-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .slide-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .mission-number {
+            background: linear-gradient(135deg, #84C1FA 0%, #CEE6FD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-white font-bold text-xl">
+                    <i class="fas fa-home mr-2"></i>RPB Foundation
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#beranda" class="text-white hover:text-blue-200 transition">Beranda</a>
+                    <a href="#tentang" class="text-white hover:text-blue-200 transition">Tentang</a>
+                    <a href="#visi-misi" class="text-white hover:text-blue-200 transition">Visi & Misi</a>
+                    <a href="#pilar" class="text-white hover:text-blue-200 transition">Lima Pilar</a>
+                    <a href="#program" class="text-white hover:text-blue-200 transition">Program</a>
+                    <a href="#mitra" class="text-white hover:text-blue-200 transition">Mitra</a>
+                    <a href="#kontak" class="text-white hover:text-blue-200 transition">Kontak</a>
+                </div>
+                <button id="mobileMenuBtn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-blue-900 text-white">
+            <div class="container mx-auto px-6 py-4 space-y-3">
+                <a href="#beranda" class="block hover:text-blue-200 transition">Beranda</a>
+                <a href="#tentang" class="block hover:text-blue-200 transition">Tentang</a>
+                <a href="#visi-misi" class="block hover:text-blue-200 transition">Visi & Misi</a>
+                <a href="#pilar" class="block hover:text-blue-200 transition">Lima Pilar</a>
+                <a href="#program" class="block hover:text-blue-200 transition">Program</a>
+                <a href="#mitra" class="block hover:text-blue-200 transition">Mitra</a>
+                <a href="#kontak" class="block hover:text-blue-200 transition">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-blue-400 rounded-full opacity-20 floating"></div>
+            <div class="absolute top-40 right-20 w-24 h-24 bg-blue-300 rounded-full opacity-20 floating" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-blue-500 rounded-full opacity-10 floating" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="slide-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    Rumah Peradaban Bangsa Foundation
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                    Membangun Manusia – Menegakkan Peradaban – Menuju Indonesia Emas 2045
+                </p>
+                <p class="text-lg max-w-3xl mx-auto mb-12 text-blue-50">
+                    RPB Foundation hadir sebagai lembaga sosial non-profit yang berfokus pada penguatan peradaban bangsa melalui pembangunan manusia, ekonomi, sosial, budaya, dan lingkungan secara terpadu menuju Indonesia Emas 2045.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('tentang')" class="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition transform hover:scale-105">
+                        <i class="fas fa-info-circle mr-2"></i>Telusuri Lebih Lanjut
+                    </button>
+                    <button onclick="scrollToSection('program')" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i>Lihat Program Kami
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-3xl text-blue-200"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <div class="slide-in">
+                    <h2 class="text-4xl font-bold text-blue-900 mb-6">Latar Belakang dan Tantangan Bangsa</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-3">Visi Indonesia Emas 2045</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Dalam perjalanan bangsa menuju Indonesia Emas 2045, dibutuhkan fondasi kuat berupa manusia unggul, ekonomi berdaya, lingkungan lestari, serta budaya dan nilai kebangsaan yang kokoh.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-blue-800 mb-3">Tantangan Pembangunan</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                    <span>Ketimpangan sosial yang masih tinggi</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                    <span>Degradasi lingkungan berkelanjutan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                    <span>Rendahnya literasi kebangsaan</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+                                    <span>Melemahnya ketahanan sosial masyarakat</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-in">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl">
+                        <img src="ppt_extracted/ppt/media/image-1-1.png" alt="Rumah Peradaban Bangsa Foundation" class="w-full h-auto rounded-lg shadow-xl hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="visi-misi" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Visi dan Misi Organisasi</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    RPB Foundation berkomitmen menjadi lembaga terdepan dalam membangun peradaban bangsa
+                </p>
+            </div>
+
+            <!-- Vision -->
+            <div class="mb-16 slide-in">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-6">
+                        <i class="fas fa-eye text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">Visi</h3>
+                    <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                        Menjadi lembaga terdepan dalam membangun peradaban bangsa yang tangguh, mandiri, berdaya saing, dan berakhlak mulia menuju Indonesia Emas 2045.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Missions -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">01</span>
+                        <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Pendidikan Karakter</h4>
+                    <p class="text-gray-700">Menguatkan pendidikan karakter, moral, dan kebangsaan berbasis nilai Pancasila dan UUD 1945</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">02</span>
+                        <i class="fas fa-users text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Pengembangan SDM</h4>
+                    <p class="text-gray-700">Mengembangkan potensi sumber daya manusia melalui pendidikan, pelatihan, dan teknologi</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">03</span>
+                        <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Kemandirian Ekonomi</h4>
+                    <p class="text-gray-700">Mendorong kemandirian ekonomi melalui pemberdayaan UMKM, koperasi, dan ekonomi kreatif</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">04</span>
+                        <i class="fas fa-hands-helping text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Program Sosial</h4>
+                    <p class="text-gray-700">Mengembangkan program sosial dan kemanusiaan yang berkeadilan</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">05</span>
+                        <i class="fas fa-leaf text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Pelestarian Lingkungan</h4>
+                    <p class="text-gray-700">Menumbuhkan kesadaran pelestarian lingkungan dan ketahanan energi berkelanjutan</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">06</span>
+                        <i class="fas fa-shield-alt text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Bela Negara</h4>
+                    <p class="text-gray-700">Menanamkan semangat bela negara dan ketahanan nasional di kalangan generasi muda</p>
+                </div>
+
+                <div class="mission-card slide-in bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <span class="mission-number text-4xl font-bold mr-4">07</span>
+                        <i class="fas fa-lightbulb text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-blue-900 mb-3">Riset dan Inovasi</h4>
+                    <p class="text-gray-700">Mengembangkan riset, inovasi sosial, dan kolaborasi lintas lembaga untuk memperkuat daya saing bangsa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Five Pillars Section -->
+    <section id="pilar" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Lima Pilar Peradaban Bangsa</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    RPB Foundation berpegang pada lima pilar fundamental yang menjadi landasan pemikiran
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="pillar-card bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6">
+                        <i class="fas fa-user-graduate text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Pendidikan dan Karakter Manusia</h3>
+                    <p class="text-gray-700">Pondasi utama membentuk generasi berdaya saing dengan karakter kuat dan integritas tinggi</p>
+                </div>
+
+                <div class="pillar-card bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6">
+                        <i class="fas fa-coins text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Ekonomi dan Kemandirian</h3>
+                    <p class="text-gray-700">Sumber kekuatan bangsa di era global melalui pemberdayaan ekonomi kerakyatan</p>
+                </div>
+
+                <div class="pillar-card bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-2xl text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-emerald-600 rounded-full mb-6">
+                        <i class="fas fa-tree text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Lingkungan dan Ketahanan Alam</h3>
+                    <p class="text-gray-700">Dasar keberlanjutan kehidupan untuk generasi masa depan</p>
+                </div>
+
+                <div class="pillar-card bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-600 rounded-full mb-6">
+                        <i class="fas fa-theater-masks text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Budaya dan Identitas Nasional</h3>
+                    <p class="text-gray-700">Roh yang menjaga jati diri bangsa di tengah arus globalisasi</p>
+                </div>
+
+                <div class="pillar-card bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-red-600 rounded-full mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Ketahanan Sosial dan Nasional</h3>
+                    <p class="text-gray-700">Benteng stabilitas dan keamanan masyarakat Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="program" class="py-32 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Program Unggulan Kami</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Berbagai program inovatif untuk membangun peradaban bangsa
+                </p>
+            </div>
+
+            <!-- Education Programs -->
+            <div class="mb-16 slide-in">
+                <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">
+                    <i class="fas fa-graduation-cap mr-3"></i>Program Pendidikan & Peningkatan SDM
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-blue-600 mb-3">1</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Sekolah Peradaban Nusantara</h4>
+                        <p class="text-gray-700 text-sm">Model pendidikan karakter berbasis Pancasila dan wawasan kebangsaan</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-blue-600 mb-3">2</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Akademi Kepemimpinan Bangsa</h4>
+                        <p class="text-gray-700 text-sm">Pelatihan kepemimpinan untuk pemuda, ASN, dan aparatur daerah</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-blue-600 mb-3">3</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Program Literasi Nusantara Digital</h4>
+                        <p class="text-gray-700 text-sm">Penguatan literasi digital, keuangan, dan kebangsaan di daerah 3T</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-blue-600 mb-3">4</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Beasiswa Anak Bangsa</h4>
+                        <p class="text-gray-700 text-sm">Dukungan pendidikan bagi anak berprestasi dari keluarga prasejahtera</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Economic Programs -->
+            <div class="mb-16 slide-in">
+                <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">
+                    <i class="fas fa-chart-line mr-3"></i>Pemberdayaan Ekonomi & Kemandirian Nasional
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-3">1</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Gerakan Nasional UMKM Berdaya</h4>
+                        <p class="text-gray-700 text-sm">Pelatihan, pendampingan, dan akses pembiayaan UMKM</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-3">2</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Program Ekonomi Halal Hebat</h4>
+                        <p class="text-gray-700 text-sm">Membangun ekosistem halal nasional dengan KNEKS, BPKH</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-3">3</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Pasar Peradaban & Bazaar</h4>
+                        <p class="text-gray-700 text-sm">Fasilitasi promosi produk lokal di kementerian dan BUMN</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold text-green-600 mb-3">4</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Inkubator Wirausaha Sosial</h4>
+                        <p class="text-gray-700 text-sm">Pengembangan startup dan koperasi berbasis komunitas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Environmental Programs -->
+            <div class="mb-16 slide-in">
+                <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">
+                    <i class="fas fa-leaf mr-3"></i>Program Lingkungan, Sosial & Budaya
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-emerald-600 mb-3">🌱</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Gerakan Hijau Nusantara</h4>
+                        <p class="text-gray-700 text-sm">Penanaman pohon, konservasi hutan kota, dan kampung hijau</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-emerald-600 mb-3">💧</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Program Sungai Bersih</h4>
+                        <p class="text-gray-700 text-sm">Edukasi energi berkelanjutan dan pengelolaan sumber daya air</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-emerald-600 mb-3">🎭</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Festival Peradaban Nusantara</h4>
+                        <p class="text-gray-700 text-sm">Gelar budaya, kuliner, dan warisan tradisi daerah</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- National Defense Programs -->
+            <div class="slide-in">
+                <h3 class="text-2xl font-bold text-blue-900 mb-8 text-center">
+                    <i class="fas fa-shield-alt mr-3"></i>Ketahanan Nasional & Bela Negara
+                </h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-red-600 mb-3">🏛</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Forum Kebangsaan Nusantara</h4>
+                        <p class="text-gray-700 text-sm">Diskusi lintas generasi dan lembaga negara</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-red-600 mb-3">🎖</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Pelatihan Bela Negara</h4>
+                        <p class="text-gray-700 text-sm">Kerja sama dengan Kemenhan dan Lemhannas</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-red-600 mb-3">🌾</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Ketahanan Sosial dan Pangan</h4>
+                        <p class="text-gray-700 text-sm">Mendukung strategi kedaulatan pangan daerah</p>
+                    </div>
+                    <div class="program-card bg-white p-6 rounded-xl shadow-lg">
+                        <div class="text-2xl font-bold text-red-600 mb-3">🇮🇩</div>
+                        <h4 class="text-lg font-semibold text-blue-900 mb-2">Gerakan 2045 Emas</h4>
+                        <p class="text-gray-700 text-sm">Inisiatif nasional mendukung visi Astacita</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="mitra" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Mitra Strategis dan Kolaborasi Nasional</h2>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    RPB Foundation menjalin kerja sama lintas sektor dengan berbagai lembaga strategis
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🏛️</div>
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">Kementerian & Lembaga Negara</h3>
+                        <ul class="text-sm text-gray-700 space-y-1 text-left">
+                            <li>• Kemenko PMK</li>
+                            <li>• Kemenko Perekonomian</li>
+                            <li>• Kemendikbudristek</li>
+                            <li>• KLHK</li>
+                            <li>• KemenKopUKM</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-green-50 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🏢</div>
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">BUMN & BUMD</h3>
+                        <ul class="text-sm text-gray-700 space-y-1 text-left">
+                            <li>• Pertamina</li>
+                            <li>• Bank Mandiri</li>
+                            <li>• PLN</li>
+                            <li>• Telkom</li>
+                            <li>• Antam</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-purple-50 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🏙</div>
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">Pemerintah Daerah</h3>
+                        <ul class="text-sm text-gray-700 space-y-1 text-left">
+                            <li>• Pemprov, Pemkab, Pemkot</li>
+                            <li>• Festival Peradaban Daerah</li>
+                            <li>• Pelatihan SDM</li>
+                            <li>• UMKM Daerah Berdaya</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-orange-50 p-6 rounded-xl">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-lg font-semibold text-blue-900 mb-3">Akademisi & Komunitas</h3>
+                        <ul class="text-sm text-gray-700 space-y-1 text-left">
+                            <li>• Universitas Indonesia</li>
+                            <li>• IPB</li>
+                            <li>• UGM</li>
+                            <li>• UIN</li>
+                            <li>• Jaringan lembaga sosial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="gradient-bg py-32 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 slide-in">
+                <h2 class="text-4xl font-bold mb-4">Bergabunglah Bersama Kami</h2>
+                <p class="text-xl text-blue-100 mb-8">
+                    "Peradaban bukanlah warisan, tetapi perjuangan yang diwariskan."
+                </p>
+                <p class="text-lg text-blue-200 mb-12">
+                    — Rumah Peradaban Bangsa Foundation
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div class="slide-in">
+                    <div class="bg-white/10 backdrop-filter backdrop-blur-lg p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-6">Informasi Kontak</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-globe text-2xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Website</p>
+                                    <p class="text-blue-100">www.rumahperadabanbangsa.id</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-instagram text-2xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Instagram</p>
+                                    <p class="text-blue-100">@rumahperadabanbangsa</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-2xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold">Email</p>
+                                    <p class="text-blue-100">info@rumahperadabanbangsa.id</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-in">
+                    <div class="bg-white/10 backdrop-filter backdrop-blur-lg p-8 rounded-2xl">
+                        <h3 class="text-2xl font-semibold mb-6">Dukungan Anda</h3>
+                        <p class="mb-6 text-blue-100">
+                            Bergabunglah dalam perjuangan membangun peradaban bangsa menuju Indonesia Emas 2045
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition flex-1">
+                                <i class="fas fa-hand-holding-heart mr-2"></i>Donasi
+                            </button>
+                            <button class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition flex-1">
+                                <i class="fas fa-users mr-2"></i>Relawan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Rumah Peradaban Bangsa Foundation. All rights reserved.</p>
+            <p class="mt-2 text-blue-200">Membangun Manusia – Menegakkan Peradaban – Menuju Indonesia Emas 2045</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all slide-in elements
+        document.querySelectorAll('.slide-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax Effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.gradient-bg');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Counter Animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            
+            updateCounter();
+        }
+
+        // Add hover effects to cards
+        document.querySelectorAll('.program-card, .pillar-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const offsetTop = target.offsetTop - 100; // Adjust for fixed navigation height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
