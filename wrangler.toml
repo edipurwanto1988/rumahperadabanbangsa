@@ -1,13 +1,9 @@
 name = "rumahperadabanbangsa"
+main = "index.html"
 compatibility_date = "2025-11-18"
 
 [build]
 command = ""
 
-[assets]
-directory = "./"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+[site]
+bucket = "./"
