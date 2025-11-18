@@ -288,7 +288,7 @@
                     <div class="relative">
                         <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl blur-lg opacity-30"></div>
                         <div class="relative bg-white p-2 rounded-2xl shadow-2xl w-full aspect-[4/3]">
-                            <img src="https://rumahperadabanbangsa.com/images/Yosua_Siburian2.jpeg" alt="Rumah Peradaban Bangsa Foundation" class="w-full h-full object-cover rounded-xl">
+                            <img src="https://rumahperadabanbangsa.com/images/Yosua_Siburian2.jpeg" alt="Rumah Peradaban Bangsa Foundation" class="w-full h-full object-cover object-top rounded-xl cursor-pointer" onclick="openImageModal('https://rumahperadabanbangsa.com/images/Yosua_Siburian.jpeg')">
                             <div class="absolute bottom-4 left-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-2 rounded-lg">
                                 <p class="font-bold">Membangun Peradaban Bangsa</p>
                             </div>
@@ -716,6 +716,14 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-start justify-center z-50 hidden" onclick="closeImageModal()">
+        <div class="relative max-w-4xl max-h-full p-4 h-full w-full flex items-start justify-center overflow-auto">
+            <img id="modalImage" src="" alt="Full size image" class="max-w-full object-contain">
+            <button class="absolute top-2 right-2 bg-white text-black rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-gray-200 transition" onclick="closeImageModal()">&times;</button>
+        </div>
+    </div>
+
     <!-- WhatsApp Floating Button -->
     <div class="fixed bottom-6 right-6 flex items-end z-50">
         <span class="bg-white text-gray-800 px-3 py-1 rounded-lg mr-2 shadow-md opacity-0 transition-opacity duration-300" id="whatsapp-tooltip">Jhoe</span>
@@ -847,6 +855,21 @@
         window.addEventListener('load', () => {
             document.body.classList.add('loaded');
         });
+
+        // Image Modal Functions
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling when modal is closed
+        }
     </script>
 </body>
 </html>
