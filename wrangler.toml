@@ -1,0 +1,10 @@
+name = "rumahperadabanbangsa"
+compatibility_date = "2025-11-18"
+
+[site]
+bucket = "./"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
