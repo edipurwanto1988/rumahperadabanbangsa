@@ -1,11 +1,11 @@
 name = "rumahperadabanbangsa"
 compatibility_date = "2025-11-18"
 
-[site]
-bucket = "./"
-
 [build]
 command = ""
+
+[assets]
+directory = "./"
 
 [[redirects]]
 from = "/*"
